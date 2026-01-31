@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Maaf ya Kak Farid 🤍</title>
+<style>
+body {
+margin: 0;
+height: 100vh;
+background: linear-gradient(135deg, #ffd6e8, #ffeaf3);
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: 'Comic Sans MS', 'Poppins', Arial, sans-serif;
+}
+.card {
+background: #fff0f6;
+padding: 28px;
+border-radius: 24px;
+max-width: 420px;
+text-align: center;
+box-shadow: 0 12px 30px rgba(255,105,180,0.25);
+position: relative;
+}
+.sticker {
+font-size: 38px;
+position: absolute;
+top: -18px;
+right: 18px;
+animation: float 3s ease-in-out infinite;
+}
+.sticker.left {
+left: 18px;
+right: auto;
+animation-delay: 1.2s;
+}
+@keyframes float {
+0% { transform: translateY(0); }
+50% { transform: translateY(-10px); }
+100% { transform: translateY(0); }
+}
+h1 {
+color: #ff5fa2;
+margin-bottom: 14px;
+}
+p {
+color: #6b3b4d;
+line-height: 1.7;
+font-size: 15.5px;
+}
+button {
+margin-top: 20px;
+padding: 12px 24px;
+border: none;
+border-radius: 999px;
+background: linear-gradient(135deg, #ff8fc7, #ff5fa2);
+color: white;
+font-size: 15px;
+cursor: pointer;
+box-shadow: 0 8px 18px rgba(255,95,162,0.35);
+}
+.hidden {
+display: none;
+margin-top: 16px;
+color: #ff5fa2;
+font-weight: bold;
+}
+.options {
+margin-top: 14px;
+display: flex;
+gap: 10px;
+justify-content: center;
+flex-wrap: wrap;
+}
+.option {
+padding: 10px 16px;
+border-radius: 999px;
+border: none;
+background: #ffd1e6;
+cursor: pointer;
+}
+.heart {
+position: fixed;
+top: -20px;
+font-size: 20px;
+animation: fall 3s linear forwards;
+}
+@keyframes fall {
+to { transform: translateY(110vh); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+<div class="card">
+<div class="sticker">🧸</div>
+<div class="sticker left">🎀</div>
+
+<h1>Maaf ya, Kak Farid 🤍</h1>
+
+<p>
+Maafkan <b>Princess</b> yang super duper egois dan keras kepala,
+sering pengen bebas, dan susah banget ngaku salah.
+</p>
+
+<p>
+Princess belum bisa memenuhi semua keinginan,
+karena Princess punya banyak batasan dan trauma
+yang sebenarnya sudah pernah kita bahas bareng.
+</p>
+
+<p>
+Princess juga sadar,
+kita berdua sama-sama bermasalah,
+sama-sama sinting, gila, dan mengong dengan versi masing-masing.
+</p>
+
+<p>
+Tapi tetap… Princess minta maaf dengan tulus 🤍
+</p>
+
+<button onclick="showQ()">Klik sini 🎀</button>
+
+<div id="q" class="hidden">
+<p><b>Apakah Princess dimaafkan? 🥺👉👈</b></p>
+<div class="options">
+<button class="option" onclick="yes()">1. Iya</button>
+<button class="option" onclick="yes()">2. Sama sa deng no 1</button>
+<button class="option" onclick="yes()">3. Iya tapi malu</button>
+<button class="option" onclick="yes()">4. Yaudah deh</button>
+<button class="option" onclick="yes()">5. Masa engga 😌</button>
+</div>
+</div>
+
+<div id="ans" class="hidden">💖 Yeay… makasih ya 🧸💗</div>
+</div>
+
+<script>
+function showQ() {
+document.getElementById("q").classList.remove("hidden");
+}
+function yes() {
+document.getElementById("ans").classList.remove("hidden");
+for (let i = 0; i < 12; i++) {
+const h = document.createElement("div");
+h.className = "heart";
+h.innerText = "💗";
+h.style.left = Math.random() * 100 + "vw";
+document.body.appendChild(h);
+setTimeout(() => h.remove(), 3000);
+}
+}
+</script>
+</body>
+</html>
+
